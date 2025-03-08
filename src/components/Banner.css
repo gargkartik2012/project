@@ -1,0 +1,17 @@
+.banner {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .banner h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  .banner p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+  }
+  

@@ -1,0 +1,110 @@
+/* General Burger Container */
+.burger-container {
+  position: fixed; /* Keeps the navbar in place while scrolling */
+  top: 10px; 
+  right: 10px; /* Switch to 'left: 10px' if you prefer it on the left */
+  z-index: 1000; /* Ensures it stays above other content */
+  font-family: Arial, sans-serif;
+}
+
+/* Button Styles */
+.burger-menu-button {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* Initially hidden for larger screens */
+}
+
+/* Menu Styles */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #333;
+  position: absolute;
+  top: 50px; /* Places the menu below the button */
+  right: 0; /* Aligns menu with the button */
+  width: 180px; /* Adjust as needed */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.burger-menu a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0; /* Adds spacing between links */
+  font-size: 18px;
+}
+
+.burger-menu a:hover {
+  color: #ffcc00; /* Highlight effect on hover */
+}
+
+/* Authentication Links */
+.auth-links {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.auth-link {
+  color: #ddd;
+  margin: 0 5px; /* Adds spacing around 'Login / Signup' */
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  color: #ffcc00; /* Highlight effect on hover */
+}
+
+/* Push Content Below Navbar */
+body {
+  padding-top: 60px; /* Adjust this value to match navbar's height */
+}
+
+/* Responsive Design: Show the Button on Small Screens */
+@media (max-width: 768px) {
+  .burger-menu-button {
+    display: block;
+  }
+
+  .burger-menu.open {
+    display: flex;
+  }
+
+  .burger-container {
+    top: 10px;
+    right: 10px; /* Aligns with margins */
+  }
+
+  .burger-menu {
+    top: 40px; /* Ensures spacing below the button */
+  }
+}
+
+/* Large Screens: Horizontal Menu */
+@media (min-width: 769px) {
+  .burger-menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
+
+  .burger-menu a {
+    color: black;
+    margin: 0 15px; /* Adds spacing between links */
+  }
+
+  .auth-links {
+    margin-left: auto; /* Push auth links to the right */
+    display: flex;
+    align-items: center;
+  }
+
+  .auth-links .auth-link {
+    margin: 0 10px; /* Adds space between login and signup links */
+  }
+}

@@ -1,0 +1,86 @@
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px; /* Reduced padding */
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  margin: 10px; /* Add margin to create gap */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  width: 100%;
+  height: 100px; /* Reduced height */
+  max-width: 100px; /* Reduced max-width */
+  border-radius: 4px;
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
+
+h3 {
+  font-size: 16px; /* Reduced font size */
+  margin: 8px 0; /* Adjusted margin */
+}
+
+p {
+  font-size: 14px; /* Reduced font size */
+  color: #333;
+}
+
+.product-card button {
+  position: relative;
+  border: none;
+  padding: 8px 16px; /* Reduced padding */
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 150px;
+  margin: 5px; /* Add margin to create gap */
+}
+
+.product-card button.active::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  bottom: -4px;
+  right: -4px;
+  background-size: 200% 200%;
+  border-radius: 8px;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.product-card button:hover::before {
+  opacity: 1;
+}
+
+/* Add to Cart button styles */
+.product-card .add-to-cart {
+  background-color: #007BFF;
+}
+
+.product-card .add-to-cart:hover {
+  background-color: #4e8ccd;
+}
+
+.product-card .add-to-cart.active::before {
+  background: #0056b3;
+}
+
+/* Save Later button styles */
+.product-card .save-later {
+  background-color: #e74c3c;
+}
+
+.product-card .save-later:hover {
+  background-color: #c0392b;
+}
+
+.product-card .save-later.active::before {
+  background: #992d22;
+}
